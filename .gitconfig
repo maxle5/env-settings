@@ -1,0 +1,45 @@
+[user]
+	email = max.lefebvre@garvin-allen.com
+	name = Max Lefebvre
+
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	trustctime = false
+
+[color]
+	ui = true
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+	prompt = false
+
+[diff]
+	tool =  vscode
+
+[merge]
+	tool = kdiff3
+
+[mergetool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+	trustExitCode = false
+
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+    keepBackup = false
+
+[alias]
+	dt = difftool
